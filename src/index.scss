@@ -1,0 +1,11 @@
+@import "theme/app.scss";
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 15%;
+  background-color: #121214;
+
+}
