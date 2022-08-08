@@ -1,4 +1,4 @@
-import { logo, clock, historic } from "icons"
+import { logo, clock, historic, plus, minus } from "icons"
 
 export const iconData = [
   {
@@ -15,5 +15,15 @@ export const iconData = [
     id: 2,
     name: "historic",
     src: historic
+  },
+  {
+    id: 3,
+    name: "plus",
+    src: plus
+  },
+  {
+    id: 4,
+    name: "minus",
+    src: minus
   }
 ]
