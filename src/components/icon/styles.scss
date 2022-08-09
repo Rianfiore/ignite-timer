@@ -1,0 +1,34 @@
+@import "theme/app.scss";
+
+.icon {
+
+  &--small{
+    width: $icon-small;
+    height: $icon-small;
+
+    img {
+      width: $icon-small;
+      height: $icon-small;
+    }
+  }
+
+  &--normal{
+    width: $icon-normal;
+    height: $icon-normal;
+
+    img {
+      width: $icon-normal;
+      height: $icon-normal;
+    }
+  }
+
+  &--large{
+    width: $icon-large;
+    height: $icon-large;
+
+    img {
+      width: $icon-large;
+      height: $icon-large;
+    }
+  }
+}
