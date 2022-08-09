@@ -1,5 +1,7 @@
 import { ParagraphProps } from "./types"
 
+import "./styles.scss"
+
 export const Paragraph = ({children} : ParagraphProps) => {
 
   return (
