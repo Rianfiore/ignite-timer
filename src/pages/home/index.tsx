@@ -1,4 +1,4 @@
-import { Flex, Main, Paragraph, Input} from "components"
+import { Flex, Main, Paragraph, Input, Counter} from "components"
 
 export const Home = () => {
   return (
@@ -10,6 +10,7 @@ export const Home = () => {
         <Input type="number" placeholder="00" modifier/>
         <Paragraph>minutos.</Paragraph>
       </Flex>
+     <Counter/>
     </Main>
   )
 }
