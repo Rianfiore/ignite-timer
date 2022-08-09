@@ -1,9 +1,19 @@
 @import "theme/app.scss";
 
 .input {
+  height: 19px;
+  position:relative;
+  padding: $percent-xxxs $percent-xxxs;
   background-color: transparent;
   color: $gray4;
   border: none;
+  border-bottom: 2px solid $gray4;
   outline: none;
 
+  text-align: center;
+  font-size: $font-large;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
 }
+
+
