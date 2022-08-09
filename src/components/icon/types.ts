@@ -5,5 +5,7 @@ export interface IconProps {
   icon: IconType,
   alt: string,
   size?: string,
-  children?: ReactNode
+  children?: ReactNode,
+  onClick?: () => void,
+  onHover?: boolean
 }
