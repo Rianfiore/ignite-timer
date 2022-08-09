@@ -7,7 +7,7 @@ export const Home = () => {
         <Paragraph>Vou trabalhar em</Paragraph>
         <Input type="text" placeholder="Dê um nome para o seu projeto"/>
         <Paragraph>durante</Paragraph>
-        <Input type="number" placeholder="00" modifier/>
+        <Input type="text" placeholder="00" modifier/>
         <Paragraph>minutos.</Paragraph>
       </Flex>
     </Main>
