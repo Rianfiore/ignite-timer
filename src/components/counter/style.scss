@@ -1,0 +1,59 @@
+@import 'theme/app.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px $percent-xxl;
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $percent-m;
+
+    &__number-timer {
+      color: $gray7;
+      font-size: $font-secundary-normal;
+      font-family: $font-family-secundary;
+      background-color: $gray3;
+      border-radius: 5px;
+      padding: $percent-xs;
+    }
+
+    &__divider {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    &__circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background-color: $green;
+    }
+  }
+  .button {
+    width: $button-normal;
+    height: 3rem;
+    color: $white;
+    font-family: $font-family-primary;
+    background-color:  $green;
+    border: transparent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $percent-xxxs;
+
+    &:hover {
+      cursor: pointer;
+      color: $gray7;
+      background-color: $green-dark;
+    }
+  }
+}
