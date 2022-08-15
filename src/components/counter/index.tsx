@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import './style.scss'
+import {Icon} from 'components'
 
-
-const SECOND_DEFAULT = 300;
+const SECOND_DEFAULT = 600;
 
 export const Counter = () => {
 
@@ -16,9 +17,20 @@ const secondsToTime = (secs: number) => {
 
   //retornar uma string e concatenar minutos por sengundos
   //a função padStart vai manter os digitos a esquerda, o "2" é quantidade de digitos, o "0" o número que vai retornar na tela
-  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  // return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  return (
+    <div className='content'>
+      <span className='content__number-timer'>{`${String(minutes).padStart(2, '0')[0]}`}</span>
+      <span className='content__number-timer'>{`${String(minutes).padStart(2, '0')[1]}`}</span>
+      <div className='content__divider'>
+        <span className='content__circle'></span>
+        <span className='content__circle'></span>
+      </div>
+      <span className='content__number-timer'>{`${String(seconds).padStart(2, '0')[0]}`}</span>
+      <span className='content__number-timer'>{`${String(seconds).padStart(2, '0')[1]}`}</span>
+    </div>
+  )
 ;}
-
 
 const startTimer = () => {
   setInterval(() => {
@@ -29,9 +41,14 @@ const startTimer = () => {
 }
 
 return (
-  <div>
-    <h1>{secondsToTime(seconds)}</h1>
-    <button onClick={() => startTimer()}>start</button>
+  <div className='container'>
+
+      {secondsToTime(seconds)}
+   
+    <button className='button' onClick={() => startTimer()}>
+    <Icon icon = 'play' alt = 'play icon' />
+    Começar
+    </button>
   </div>
   )
 }
