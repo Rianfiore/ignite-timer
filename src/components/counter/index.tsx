@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './style.scss'
 import {Icon} from 'components'
 
@@ -6,7 +6,8 @@ const SECOND_DEFAULT = 600;
 
 export const Counter = () => {
 
-const [seconds, setSeconds] = useState(SECOND_DEFAULT);
+const [changeTimer, setChangeTimer] = useState<string>('stop');
+const [seconds, setSeconds] = useState<number>(SECOND_DEFAULT);
 
 const secondsToTime = (secs: number) => {
   //uma hora tem 3600 segundos
@@ -15,9 +16,6 @@ const secondsToTime = (secs: number) => {
   const minutes = Math.floor( divisorMinute / 60);
   const seconds = Math.ceil( divisorMinute % 60);
 
-  //retornar uma string e concatenar minutos por sengundos
-  //a função padStart vai manter os digitos a esquerda, o "2" é quantidade de digitos, o "0" o número que vai retornar na tela
-  // return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
   return (
     <div className='content'>
       <span className='content__number-timer'>{`${String(minutes).padStart(2, '0')[0]}`}</span>
@@ -32,23 +30,28 @@ const secondsToTime = (secs: number) => {
   )
 ;}
 
-const startTimer = () => {
-  setInterval(() => {
-    setSeconds((previousSeconds) => {
-      return previousSeconds - 1;
-    })
+useEffect(() => {
+
+  setTimeout(() => {
+    changeTimer === 'start' && setSeconds(seconds - 1)
   }, 1000)
-}
+
+}, [changeTimer, seconds])
 
 return (
   <div className='container'>
-
-      {secondsToTime(seconds)}
-   
-    <button className='button' onClick={() => startTimer()}>
-    <Icon icon = 'play' alt = 'play icon' />
-    Começar
-    </button>
+    {secondsToTime(seconds)}
+    {changeTimer === 'start' ? (
+       <button className='button button--stop' onClick={() => setChangeTimer('stop')}>
+       <Icon icon = 'play' alt = 'stop icon' />
+       Parar
+       </button>
+    ) : (
+       <button className='button button--start' onClick={() => setChangeTimer('start')}>
+       <Icon icon = 'play' alt = 'play icon' />
+       Começar
+       </button>
+    )}
   </div>
   )
 }

@@ -5,55 +5,69 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px $percent-xxl;
+  padding: 0px $percent-xxxl;
 
   .content {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: $percent-m;
+    margin-bottom: $percent-l;
 
     &__number-timer {
       color: $gray7;
       font-size: $font-secundary-normal;
       font-family: $font-family-secundary;
       background-color: $gray3;
-      border-radius: 5px;
-      padding: $percent-xs;
+      border-radius: 10px;
+      padding-left: $percent-s;
+      padding-right: $percent-s;
     }
 
     &__divider {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 50px;
+      gap: 25px;
     }
 
     &__circle {
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
       border-radius: 100%;
       background-color: $green;
     }
   }
   .button {
-    width: $button-normal;
-    height: 3rem;
+    width: 100%;
+    height: 4rem;
     color: $white;
     font-family: $font-family-primary;
-    background-color:  $green;
     border: transparent;
-    border-radius: 5px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: $percent-xxxs;
 
-    &:hover {
-      cursor: pointer;
-      color: $gray7;
-      background-color: $green-dark;
+    &--start {
+      background-color:  $green;
+
+      &:hover {
+        cursor: pointer;
+        color: $gray7;
+        background-color: $green-dark;
+      }
+    }
+
+    &--stop {
+      background-color:  $red;
+
+      &:hover {
+        cursor: pointer;
+        color: $gray7;
+        background-color: $red-dark;
+      }
     }
   }
 }
