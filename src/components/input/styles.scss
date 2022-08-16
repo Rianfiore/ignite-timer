@@ -14,6 +14,12 @@
   font-size: $font-large;
   font-family: $font-family-primary;
   font-weight: $font-weight-bold;
+
+  &:focus {
+    &::placeholder{
+      color: transparent;
+    }
+  }
 }
 
 
