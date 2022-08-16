@@ -19,7 +19,11 @@ export const Input = ({type, placeholder = "", modifier = false, modifierMin = 0
     modifier ? (
       <>
          <Icon icon="minus" alt="minus icon" onHover onClick={() => addSubValue("sub")}/>
-         <input className={`input input--${type}`} value={input} placeholder={placeholder} type={type} size={size} onChange={e => setInput(Number(e.target.value))}/>
+         <input
+         className={`input input--${type}`}
+         value={input} placeholder={placeholder}
+         type={type} size={size}
+         onChange={e => setInput(Number(e.target.value))} />
          <Icon icon="plus" alt="plus icon" onHover onClick={() => addSubValue("add")}/>
       </>
      ) : <input className={`input input--${type}`} placeholder={placeholder} type={type} size={size} />
