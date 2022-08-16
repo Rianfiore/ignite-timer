@@ -2,6 +2,10 @@
 
 .icon {
 
+  &--hover{
+    cursor: pointer;
+  }
+
   &--small{
     width: $icon-small;
     height: $icon-small;
