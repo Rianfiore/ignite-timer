@@ -1,1 +1,1 @@
-export type IconType = "logo" | "clock" | "historic" | "plus" | "minus"
+export type IconType = "logo" | "clock" | "historic" | "plus" | "minus" | "play"
